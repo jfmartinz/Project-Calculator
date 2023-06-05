@@ -1,0 +1,62 @@
+*,*::before,*::after{
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root{
+    --background: #212122;
+    --operator-color:#ff9500;
+    --number-color:#505050;
+    --special-btns-color: #a2a2a2;
+}
+
+body{
+    background-color: var(--background);
+    margin: 0;
+    padding: 0;
+}
+
+.calculator-grid{
+    display: grid;
+    justify-content: center;
+    align-content: center;  
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 80px);
+    grid-template-rows: repeat(6,80px);
+    gap: 15px;
+}
+.calculator-grid > button {
+    border-radius: 50%;
+    font-size: 20px;
+    outline: none;
+    border: none;
+}
+
+/* styles for buttons */
+.operators{
+    background-color: var(--operator-color);
+    color: #fff;
+    cursor: pointer;
+}
+.number{
+    background-color: var(--number-color);
+    color: #fff;
+    cursor: pointer;
+}
+.special-btns{
+    background-color: var(--special-btns-color);
+    cursor: pointer;
+}
+
+
+.output{
+    grid-column: 1/-1;
+    background-color: #808080;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;    
+}
+.span-two{
+    grid-column: span 2;
+    border-radius:50px  !important;
+}
