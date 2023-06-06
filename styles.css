@@ -21,8 +21,8 @@ body{
     justify-content: center;
     align-content: center;  
     min-height: 100vh;
-    grid-template-columns: repeat(4, 80px);
-    grid-template-rows: repeat(6,80px);
+    grid-template-columns: repeat(4, 70px);
+    grid-template-rows: repeat(6,70px);
     gap: 15px;
 }
 .calculator-grid > button {
@@ -32,13 +32,14 @@ body{
     border: none;
 }
 
+
 /* styles for buttons */
-.operators{
+.operatorKey, .span-two{
     background-color: var(--operator-color);
     color: #fff;
     cursor: pointer;
 }
-.number{
+.numberKey, #point{
     background-color: var(--number-color);
     color: #fff;
     cursor: pointer;
@@ -46,8 +47,23 @@ body{
 .special-btns{
     background-color: var(--special-btns-color);
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
+.calculator-grid > .numberKey:focus{
+    background-color: #6e6e6e;
+}
+.calculator-grid #point:focus{
+    background-color: #6e6e6e;
+}
+.calculator-grid > .operatorKey:focus{
+    background-color: #ffa82e;
+}
+.calculator-grid > .special-btns:focus{
+    background-color: #cfcaca;
+}
 
 .output{
     grid-column: 1/-1;
@@ -55,6 +71,10 @@ body{
     display: flex;
     justify-content: flex-end;
     align-items: center;    
+    padding: 10px;
+    font-size: 1.5em;
+    word-wrap: break-word;
+    word-break: break-all;
 }
 .span-two{
     grid-column: span 2;
