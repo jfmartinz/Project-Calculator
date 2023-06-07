@@ -13,32 +13,29 @@
 <body>
 
     <div class="calculator-grid">
-        <div class="output">
-            <div class="previousOperand"></div>
-            <div class="displayOperator"></div>
-            <div class="currentOperand"></div>
-        </div>
-
-        <button class="special-btns"><img src="github.png" alt="github-logo"  width="35" height="auto"></button>
+        <div class="output"></div>
+    
+        <button class="special-btns"><img src="github.png" alt="github-logo" width="35" height="auto"></button>
         <button id="all-clear" class="special-btns">AC</button>
         <button id="backspace" class="special-btns"><img src="backspace.png" alt="backspace" width="35" height="auto"></button>
-        <button class="operatorKey">÷</button>
+        <button class="operatorKey" onclick="appendOperator('/')">÷</button>
         <button class="numberKey" onclick="appendNumber('7')">7</button>
         <button class="numberKey" onclick="appendNumber('8')">8</button>
         <button class="numberKey" onclick="appendNumber('9')">9</button>
-        <button class="operatorKey">x</button>
+        <button class="operatorKey" onclick="appendOperator('*')">x</button>
         <button class="numberKey" onclick="appendNumber('4')">4</button>
         <button class="numberKey" onclick="appendNumber('5')">5</button>
         <button class="numberKey" onclick="appendNumber('6')">6</button>
-        <button class="operatorKey">-</button>
+        <button class="operatorKey" onclick="appendOperator('-')">-</button>
         <button class="numberKey" onclick="appendNumber('1')">1</button>
         <button class="numberKey" onclick="appendNumber('2')">2</button>
         <button class="numberKey" onclick="appendNumber('3')">3</button>
-        <button class="operatorKey">+</button>
+        <button class="operatorKey" onclick="appendOperator('+')">+</button>
         <button class="numberKey" onclick="appendNumber('0')">0</button>
-        <button id="point">.</button>
-        <button id="equals" class="span-two">=</button>
+        <button id="point" onclick="appendDecimal('.')">.</button>
+        <button id="equals" class="span-two" onclick="calculate()">=</button>
     </div>
+    
 
 
 
