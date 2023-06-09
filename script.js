@@ -33,36 +33,38 @@ function openGitHub() {
     window.open("https://github.com/jfmartinz", "_blank");
   }
 
-function calculate() {
-  const expression = output.innerHTML;
-  const operator = getOperator(expression);
-  const operands = expression.split(operator);
+  function calculate() {
+    const expression = output.innerHTML.trim();
+    const operator = getOperator(expression);
+    const operands = expression.split(operator);
   
-  if (operands.length === 2) {
-    const operand1 = parseFloat(operands[0]);
-    const operand2 = parseFloat(operands[1]);
-    
-    let result;
-    switch (operator) {
-      case '+':
-        result = add(operand1, operand2);
-        break;
-      case '-':
-        result = subtract(operand1, operand2);
-        break;
-      case '*':
-        result = multiply(operand1, operand2);
-        break;
-      case '/':
-        result = divide(operand1, operand2);
-        break;
-      default:
-        return;
+    if (operands.length === 2) {
+      const operand1 = parseFloat(operands[0]);
+      const operand2 = parseFloat(operands[1]);
+  
+      if (!isNaN(operand1) && !isNaN(operand2)) {
+        let result;
+        switch (operator) {
+          case '+':
+            result = add(operand1, operand2);
+            break;
+          case '-':
+            result = subtract(operand1, operand2);
+            break;
+          case '*':
+            result = multiply(operand1, operand2);
+            break;
+          case '/':
+            result = divide(operand1, operand2);
+            break;
+          default:
+            return;
+        }
+  
+        output.innerHTML = result;
+      }
     }
-    
-    output.innerHTML = result;
   }
-}
 
 function getOperator(expression) {
     switch (true) {
@@ -79,23 +81,23 @@ function getOperator(expression) {
     }
   }
 
-function add(a, b) {
-  return a + b;
+function add(operand1, operand2) {
+  return operand1 + operand2;
 }
 
-function subtract(a, b) {
-  return a - b;
+function subtract(operand1, operand2) {
+  return operand1 - operand2;
 }
 
-function multiply(a, b) {
-  return a * b;
+function multiply(operand1, operand2) {
+  return operand1 * operand2;
 }
 
-function divide(a, b) {
-  if (b === 0) {
+function divide(operand1, operand2) {
+  if (operand2 === 0) {
     return;
   }
-  return a / b;
+  return operand1 / operand2;
 }
 
 
