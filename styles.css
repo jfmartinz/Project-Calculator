@@ -28,6 +28,8 @@ body{
     gap: 15px;
     background-color: #3e3b3b;
     padding: 10px;
+    border-radius: 10px;
+    border: 3px solid #000;
 }
 .calculator-grid > button {
     border-radius: 50%;
@@ -57,19 +59,13 @@ body{
     justify-content: center;
 }
 
-.calculator-grid > .numberKey:focus{
+.calculator-grid > .numberKey:focus,#point:focus{
     background-color: #6e6e6e;
-}
-.calculator-grid #point:focus{
-    background-color: #6e6e6e;
-}
-.calculator-grid > .operatorKey:focus{
-    background-color: #ffa82e;
-}
-.calculator-grid > #equals:focus{
-    background-color: #ffa82e;
 }
 
+.calculator-grid > .operatorKey:focus,#equals:focus{
+    background-color: #ffa82e;
+}
 .calculator-grid > .special-btns:focus{
     background-color: #cfcaca;
 }
@@ -84,7 +80,7 @@ body{
     font-size: 1.5em;
     word-wrap: break-word;
     word-break: break-all;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .span-two{
     grid-column: span 2;
