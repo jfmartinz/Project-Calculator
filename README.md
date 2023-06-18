@@ -24,7 +24,22 @@ During the development of this calculator project, I gained valuable learning ex
 - **Importance of Functions:** I discovered the significance of utilizing functions in my code. By breaking down the functionality into smaller, reusable functions, I was able to improve code readability, maintainability, and manageability. Functions allowed me to organize my code effectively and reduce duplication.
 
 - **Event Listeners:** I familiarized myself with event listeners in JavaScript. By attaching event listeners to buttons and other elements, I could detect and respond to user interactions, such as button clicks. This enabled the calculator to perform calculations based on user input effectively.
+---
+## Installation
+1. **Clone the repository:**
 
+   ```bash
+   git clone https://github.com/your-username/your-repo.git
+
+2. **Navigate to the project directory:**
+   
+    ```bash
+    cd Project-Calculator
+3. **Open the calculator:**
+     ```
+     Locate the HTML file in the project directory 
+    ```
+---
 
 ## Conclusion
 In conclusion, this project has been a valuable learning experience for me. I have gained a lot of knowledge and skills while building this simple calculator using HTML, CSS, and JavaScript. Adding various functionalities, understanding the importance of functions for code organization, and utilizing event listeners have been significant takeaways from this project.
